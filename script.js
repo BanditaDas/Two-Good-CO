@@ -5,7 +5,10 @@ function locomotiveAnimation(){
 
 const locoScroll = new LocomotiveScroll({
   el: document.querySelector("#main"),
-  smooth: true
+  smooth: true,
+  tablet: {
+    breakpoint: 0,   
+  }
 });
 // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
 locoScroll.on("scroll", ScrollTrigger.update);
