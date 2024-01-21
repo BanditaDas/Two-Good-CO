@@ -1,0 +1,794 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+*::selection{
+    background-color: #000;
+    color: #fff;
+}
+@font-face {
+    font-family: f;
+    src: url(./font/Futura-Bold.ttf);
+}
+.nav{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 1.5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    pointer-events: none;
+}
+.nav .nav1{
+    height: 83px;
+    overflow: hidden;
+}
+.nav .nav1 svg{
+    display: block !important;
+}
+.nav .nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.nav2 .links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 0.8vw;
+    margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav2 .icon{
+    padding: 10px;
+    background-color: #F7F7F7;
+    border-radius: 50px;
+}
+.nav2 .icon i{
+    font-size: 1vw;
+    margin: 0 20px;
+}
+.play{
+    height: 4.5vw;
+    width: 4.5vw;
+    background-color: #000000;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+    position: fixed;
+    pointer-events: none;
+}
+.pg1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 1vw;
+    padding-top: 32vh;
+    border-bottom: 1px solid #000;
+}
+.pg1 h1{
+    font-size: 16vw;
+    font-family: f;
+    text-transform: uppercase;
+    line-height: 14vw;
+    text-align: center;
+    letter-spacing: -10px;
+}
+.pg1::before{
+    content: "DO GOOD";
+    position: absolute;
+    font-family: f;
+    top: 97%;
+    left: 93%;
+    font-size: 0.9vw;
+}
+.pg1::after{
+    content: "BUY GOOD";
+    position: absolute;
+    font-family: f;
+    top: 97%;
+    font-size: 0.9vw;
+}
+.pg1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    pointer-events: none;
+}
+.pg1 svg{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    animation-name: anime;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+}
+.pg1 span{
+    position: absolute;
+    left: 64%;
+    top: 55%;
+    font-family: f;
+    font-size: 2vw;
+}
+@keyframes anime {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.pg2{
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw 1vw;
+}
+.pg2 .elem{
+    height: 100%;
+    width: 32.5%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+}
+.elem .dets{
+    height: 50px;
+    width: 70%;
+    position: absolute;
+    z-index: 9;
+    border-radius: 30px;
+    padding-top: 1.3vw;
+    display: flex;
+    justify-content: space-around;
+}
+.dets .gola{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.dets p{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dets #bold{
+    font-size: 14px;
+    font-weight: 600;
+}
+#dets1{
+    background-color: #E5F0D6;
+}
+#dets2{
+    background-color: #F5DFCF;
+}
+#dets3{
+    background-color: #FFFFFF;
+}
+.detsinfo{
+    position: absolute;
+    top: 25%;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 1vw;
+    opacity: 0;
+}
+.info{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.info img{
+    height: 50%;
+    width: 55%;
+    object-fit: cover;
+}
+.info p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pg3{
+    min-height: 150vh;
+    width: 100%;
+    padding: 1vw;
+}
+
+.txt{
+    display: flex;
+    justify-content: space-between;
+}
+.txt h1{
+    font-family: f;
+    font-size: 3.7vw;
+    line-height: 3.7vw;
+}
+.txtp p,#span,.underline{
+    width: 50%;
+    margin-left: 15vw;
+    font-size: 1.1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.txtp p{
+    margin-bottom: 2vw;
+    line-height: 1.5vw;
+}
+.txtp #span{
+    color: #454545;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.7vw;
+}
+.txtp .underline{
+    height: 1px;
+    width: 15.5%;
+    margin-top: 0.2vw;
+    background-color: #000;
+}
+.product{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 4vw;
+    padding-bottom: 5vw;
+    
+}
+.child{
+    height: 40vw;
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.child .img{
+    height: 80%;
+    width: 80%;
+    z-index: 15 !important;
+}
+.child .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 15 !important;
+
+}
+.child .detail{
+    margin-top: 5vw;
+}
+.child .detail p{
+    font-size: 0.8vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    z-index: 15 !important;
+}
+.pg4{
+    min-height: 100vh;
+    width: 100%;
+}
+.border{
+    height: 2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+    border-bottom: 1px solid #000;
+}
+.border>p{
+    font-size: 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pg4 .tabs{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2vw;
+}
+.tabs .tab{
+    cursor: pointer;
+
+}
+.tabs .tab:hover{
+    color:#969696;
+}
+.tabs .tab .gol{
+    height: 2.5vh;
+    width: 1.2vw;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-bottom: 1.7vw;
+}
+.tabs .tab h3{
+    font-size: 1.7vw;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tabs .tab img{
+    display: none;
+}
+.pg4 .tabtxt-con{
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabtxt{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5vw;
+}
+.tabtxt h1{
+    font-family: f;
+    font-size: 4.5vw;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.pg4 .button{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.button #dark{
+    padding: 1.2vw 4.5vw;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    background-color: #000;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.button #dark:hover{
+    color: #B1B1B1;
+}
+.button p{
+    font-family: 2vw;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pg5{
+    height: 100vh;
+    width: 100%;
+    margin-top: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pg5 .item{
+    height: 100%;
+    width: 33.33%;
+    padding: 1vw;
+}
+.pg5 h4,#p,#sp,.underline{
+    width: 70%;
+    font-size: 1.1vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.pg5 h4{
+    font-size: 1.5vw;
+    font-weight: 800;
+    margin-bottom: 2vw;
+}
+.pg5 #p{
+    margin-bottom: 2vw;
+    line-height: 1.5vw;
+}
+.pg5 #sp{
+    color: #454545;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+}
+.pg5 .line{
+    height: 1px;
+    width: 28.5%;
+    margin-top: 0.2vw;
+    background-color: #000;
+}
+.item .itmimg{
+    height: 100%;
+    width: 100%;
+}
+.itmimg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.pg6{
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 10vh;
+    padding: 0 2vw;
+}
+.pg6 .up{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+.up h1{
+    font-family: f;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+}
+.up img{
+    position: absolute;
+    height: 15vh;
+    width: 14vw;
+    left: 44%;
+    top: -55%;
+}
+.up i{
+    font-size: 1.7vw;
+}
+.footer{
+    height: 80vh;
+    width: 100%;
+    margin-top: 30vh;
+}
+.footer-up{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact{
+    height: 50%;
+    width: 15%;
+}
+.contact #s{
+    color: #454545;
+    font-size: 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact p{
+    color: #000;
+    font-size: 1vw;
+    padding-bottom: 0.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact p:nth-child(2){
+    padding-top: 1.5vw;
+}
+#r{
+    text-align: right;
+}
+.logomid{
+    height: 75%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.9vw;
+}
+.logomid img{
+    height: 75%;
+}
+.copy{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy p{
+    color: #454545;
+    font-size: 0.8vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-down{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-down p{
+    width: 65%;
+    font-weight: 400;
+    text-align: center;
+    font-size: 0.9vw;
+    line-height: 1.2vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width:600px) {
+    .nav .nav1{
+        height: 68px;
+    }
+    .nav .nav1 svg{
+        padding: 2vw;
+        height: 20vw;
+    }
+    .nav .nav1 #sec{
+        padding-left: 5vw;
+        height: 17vw;
+    }
+    .nav2 .links a{
+        display: none;
+    }
+    .nav2 .icon i{
+        font-size: 4vw;
+    }
+    .play{
+        display: none;
+    }
+    .pg1{
+        min-height: 98.5vh;
+    }
+    .pg1 h1{
+        font-size: 16vw;
+        line-height: 15vw;
+        letter-spacing: -3px;
+    }
+    .pg1::before{
+        left: 80%;
+        font-size: 3.5vw;
+    }
+    .pg1::after{
+        font-size: 3.5vw;
+    }
+    .pg1 .img{
+        height: 47vh;
+    }
+    .pg1 svg{
+        height: 35vw;
+        width: 35vw;
+        left: 60%;
+    }
+    .pg1 span{
+        left: 74%;
+        top: 59%;
+        font-size: 4.5vw;
+    }
+    .pg2{
+        height: 230vh;
+        flex-direction: column;
+        gap: 5vw;
+    }
+    .pg2 .elem{
+        width: 100%;
+    }
+    .elem .dets{
+        width: 85%;
+        padding-top: 6vw;
+    }
+    .dets .gola{
+        height: 9px;
+        width: 9px;
+    }
+    .pg3{
+        min-height: 150vh;
+        width: 100%;
+        padding: 1vw;
+    }
+    .txt{
+        height: 100vh;
+        display: block;
+        padding: 0 2vw;
+        justify-content: center;
+    }
+    .txt h1{
+        font-size: 10vw;
+        line-height: 10vw;
+        margin-bottom: 10vw;
+        text-align: center;
+    }
+    .txtp p,#span,.underline{
+        width: 100%;
+        margin-left: 0vw;
+        font-size: 5.4vw;
+        text-align: center;
+    }
+    .txtp p{
+        margin-bottom: 10vw;
+        line-height: 8vw;
+    }
+    .txtp #span{
+        margin-left: 30%;
+        font-size: 3.7vw;
+    }
+    .txtp .underline{
+        width: 37%;
+        margin-top: 1vw;
+        margin-left: 30%;
+
+    }
+    .child{
+        height: 55vw;
+        width: 48vw;
+    }
+    .child .detail{
+        height: 7vh;
+        margin-top: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .child .detail p{
+        font-size: 3.5vw;
+    }
+    .border{
+        height: 5vw;
+    }
+    .border>p{
+        font-size: 2.5vw;
+    }
+    .pg4 .tabs{
+        height: 20vh;
+    }
+    .tabs .tab .gol{
+        height: 2vh;
+        width: 4vw;
+    }
+    .tabs .tab h3{
+        font-size: 3vw;
+    }
+    .tabs .tab img{
+        height: 2vw;
+        width: 10vw;
+    }
+    .pg4 .tabtxt-con{
+        height: 60vh;
+    }
+    .tabtxt{
+        height: 100%;
+    }
+    .tabtxt h1{
+        font-size: 7vw;
+    }
+    .button #dark{
+        padding: 5vw 10vw;
+    }
+    .pg5{
+        height: 170vh;
+        flex-direction: column;
+    }
+    .pg5 .item{
+        height: 70vh;
+        width: 100%;
+        padding: 2vw;
+    }
+    .pg5 #i{
+        height: 50vh;
+    }
+    .pg5 h4,#p,#sp,.underline{
+        width: 100%;
+        font-size: 5vw;
+    }
+    .pg5 h4{
+        font-size: 8vw;
+    }
+    .pg5 #p{
+        margin-bottom: 10vw;
+        line-height: 6vw;
+    }
+    .pg5 #sp{
+        font-size: 3vw;
+    }
+    .pg5 .line{
+        width: 35%;
+        margin-top: 1vw;
+    }
+    .pg6{
+        height: 120vh;
+    }
+    .pg6 .up{
+        height: 7vh;
+    }
+    .up h1{
+        font-size: 4vw;
+    }
+    .up img{
+        height: 7vh;
+        width: 20vw;
+        left: 72%;
+        top: -10%;
+    }
+    .up i{
+        font-size:5vw;
+    }
+    .footer{
+        height: 100vh;
+        margin-top: 20vh;
+    }
+    .footer-up{
+        height: 60vh;
+        position: relative;
+    }
+    .contact{
+        height: 50%;
+        width: 50%;
+    }
+    .contact #s{
+        font-size: 3.5vw;
+    }
+    .contact p{
+        font-size: 5vw;
+        padding-bottom: 2vw;
+    }
+    .contact p:nth-child(2){
+        padding-top: 10vw;
+    }
+    #r{
+        text-align: left;
+    }
+    .logomid{
+        position: absolute;
+        left: -7%;
+        top: -25%;
+    }
+    .logomid img{
+        margin-bottom: 7vh;
+        height: 25%;
+    }
+    .copy{
+        margin-top: 5vw;
+        width: 200%;
+        position: absolute;
+        display: flex;
+        left: 40%;
+        top: 220%;
+    }
+    .copy p{
+        color: #454545;
+        font-size: 3vw;
+        text-align: center;
+    }
+    .footer-down{
+        height: 10vh;
+    }
+    .footer-down p{
+        width: 100%;
+        font-weight: 400;
+        text-align: left;
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+}
