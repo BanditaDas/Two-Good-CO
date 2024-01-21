@@ -741,7 +741,7 @@ html,body{
         font-size:5vw;
     }
     .footer{
-        height: 100vh;
+        height: 110vh;
         margin-top: 20vh;
     }
     .footer-up{
@@ -775,7 +775,7 @@ html,body{
         height: 25%;
     }
     .copy{
-        margin-top: 5vw;
+        margin-top: 22vw;
         width: 200%;
         position: absolute;
         display: flex;
@@ -788,7 +788,7 @@ html,body{
         text-align: center;
     }
     .footer-down{
-        height: 10vh;
+        height: 23vh;
     }
     .footer-down p{
         width: 100%;
