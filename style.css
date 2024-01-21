@@ -663,6 +663,9 @@ html,body{
     .border>p{
         font-size: 2.5vw;
     }
+    .tabs .tab{
+     cursor: grab;
+    }
     .pg4 .tabs{
         height: 20vh;
     }
